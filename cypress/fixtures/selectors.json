@@ -1,0 +1,8 @@
+{
+	"fieldLogin": "[for=\"email\"] > .login__input",
+	"fieldPassword": "[for=\"pwd\"] > .login__input",
+	"bookingButton": "Забронировать",
+	"loginButton": "Авторизоваться",
+	"getQrCode": "Получить код бронирования",
+	"getNameHall": "#hall-configuration > .conf-step__wrapper > .conf-step__selectors-box > :nth-child(3) > .conf-step__radio"
+}

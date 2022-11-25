@@ -1,0 +1,26 @@
+{
+	"name": "cypress_2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test:dev": "cypress open",
+		"test:dash": "npx cypress run --record --key afee750e-94be-443d-823b-b15fc373fb3c",
+		"cy:spec1": "cypress run --spec cypress/integration/movie_booking.cy.js --record --key afee750e-94be-443d-823b-b15fc373fb3c",
+		"cy:spec2": "cypress run --spec cypress/integration/login.cy.js --record --key afee750e-94be-443d-823b-b15fc373fb3c",
+		"cy:parallel": "npm run cy:spec1 -- --browser chrome --group Spec1 --ci-build-id 4 & npm run cy:spec2 -- --browser chrome --group Spec2 --ci-build-id 4",
+		"cy:run:chrome": "cypress run --browser chrome",
+		"cy:run:electron": "cypress run --browser electron",
+		"cy:run:firefox": "cypress run --browser firefox",
+		"cy:parallel:browser": "npm run cy:run:chrome -- --group chrome --ci-build-id 5 & npm run cy:run:firefox -- --group firefox --ci-build-id 5",
+		"cy:first_group_test": "cypress run --spec cypress/integration/*.cy.js --record --key afee750e-94be-443d-823b-b15fc373fb3c",
+		"cy:second_group_test": "cypress run --spec cypress/integration/*.cy.js --record --key afee750e-94be-443d-823b-b15fc373fb3c",
+		"cy:parallel:parallel": "npm run cy:first_group_test -- --browser chrome --group first_group --ci-build-id 6 & npm run cy:second_group_test -- --browser chrome --group second_group --ci-build-id 6"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^10.11.0"
+	}
+}
